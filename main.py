@@ -28,7 +28,7 @@ def send_email(receiver_email, password):
 
     sender_email = " maliciouswebsiteblocker123@gmail.com"
 
-    app_password = "ihez mnhl gges dfmi"
+    app_password = "ihezmnhlggesdfmi"
 
     msg = EmailMessage()
 
