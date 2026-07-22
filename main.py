@@ -26,9 +26,9 @@ def save_log(website, status, reason):
         )
 def send_email(receiver_email, password):
 
-    sender_email = "lakshmi801929@gmail.com"
+    sender_email = " maliciouswebsiteblocker123@gmail.com"
 
-    app_password = "deuc mccp euix ihtn"
+    app_password = "ihez mnhl gges dfmi"
 
     msg = EmailMessage()
 
