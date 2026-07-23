@@ -3,6 +3,7 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 import random
 import string
+import sys
 import os
 import time
 import datetime
@@ -873,9 +874,18 @@ root.geometry(
 root.configure(
 bg="black"
 )
+# Get correct path for image
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
 # Load shield logo
-logo_image = Image.open("images/shield.png")
-logo_image = logo_image.resize((260, 260))
+logo_image = Image.open(resource_path("images/shield.png"))
+logo_image = logo_image.resize((260, 260), Image.LANCZOS)
 logo = ImageTk.PhotoImage(logo_image)
 
 # Display shield logo
