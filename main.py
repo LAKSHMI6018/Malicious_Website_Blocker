@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+from PIL import Image, ImageTk
 import random
 import string
 import os
@@ -872,6 +873,18 @@ root.geometry(
 root.configure(
 bg="black"
 )
+# Load shield logo
+logo_image = Image.open("images/shield.png")
+logo_image = logo_image.resize((260, 260))
+logo = ImageTk.PhotoImage(logo_image)
+
+# Display shield logo
+logo_label = tk.Label(
+    root,
+    image=logo,
+    bg="black"
+)
+logo_label.pack(pady=(15, 5))
 
 
 
